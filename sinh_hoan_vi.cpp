@@ -3,6 +3,20 @@
 using namespace std;
 
 int n,a[15];
+void init ();
+bool isEnd ();
+void display ();
+void gene ();
+
+int main () {
+    init();
+    while (!isEnd()) {
+        display();
+        gene();
+    }
+    display();
+    return 0;
+}
 
 void init () {
     cin >>n;
@@ -24,7 +38,6 @@ void display () {
 void gene () {
     int i;
     for (int i=n;i>=1;i--) {
-         if (i==1) return ;
         if (a[i-1]<a[i]) break;     //tìm đoạn giảm dần dài nhất
     }
     for (int j=n;j>=i;j--) {
@@ -34,14 +47,4 @@ void gene () {
             break;
         }
     }  
-}
-
-int main () {
-    init();
-    while (!isEnd()) {
-        display();
-        gene();
-    }
-    display();
-    return 0;
 }
