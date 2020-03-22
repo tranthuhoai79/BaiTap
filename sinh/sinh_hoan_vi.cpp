@@ -48,8 +48,8 @@ void display(){
 }
 
 void gene () {
-    int i;  // đánh dấu đầu đoạn giảm dần
-    for (int i=n;i>1;i--) {
+     int i;  // đánh dấu đầu đoạn giảm dần
+    for ( i=n;i>1;i--) {
         if (a[i-1]<a[i]) break;
     }
     for (int j=n;j>=i;j--) {
